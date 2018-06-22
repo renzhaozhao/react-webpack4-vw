@@ -6,27 +6,35 @@ class Page1 extends Component {
 
   state = {
     imageShow: false,
-    image: null
+    image: null,
+    num: 1
   }
 
   handleClick = () => {
-    console.log('222')
+    this.setState({
+      num: this.state.num + 1
+    })
+    /* console.log('222')
     html2canvas(document.querySelector('#tu')).then(canvas => {
       const image = canvas.toDataURL("image/png")
       this.setState({
         image,
         imageShow: true
       })
-    })
+    }) */
   }
 
   render() {
-    const { image, imageShow } = this.state
-    console.log('121212asdas')
-
+    const { image, imageShow, num } = this.state
 
     return (
       <div>
+        <div>
+          {num}
+        </div>
+        <div>
+          asdasdasda4asdasdasd
+        </div>
         {
           !imageShow ?
             <div id="tu">
